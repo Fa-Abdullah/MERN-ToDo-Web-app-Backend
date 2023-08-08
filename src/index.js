@@ -1,6 +1,7 @@
 const express = require("express")
 const Collection = require("./mongodb")
 const cors = require("cors")
+const serverless = require("serverless-http")
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -228,3 +229,5 @@ app.post("/profile",async(req,res)=>{
 app.listen(7000,()=>{
     console.log("port connected");
 })
+
+module.exports.handler = serverless(app);
