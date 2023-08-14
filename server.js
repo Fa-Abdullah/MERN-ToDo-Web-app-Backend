@@ -1,7 +1,6 @@
 const express = require("express")
 const Collection = require("./mongodb")
 const cors = require("cors")
-const serverless = require("serverless-http")
 const app = express()
 const PORT = process.env.PORT || 7000;
 app.use(express.json())
@@ -231,4 +230,3 @@ app.listen(PORT,'0.0.0.0',()=>{
     console.log("port connected");
 })
 
-module.exports.handler = serverless(app);
