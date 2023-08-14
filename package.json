@@ -12,11 +12,9 @@
   },
   "name": "mern-project-try",
   "version": "1.0.0",
-  "main": "src/api.js",
+  "main": "server.js",
   "scripts": {
-    "build": "node_modules/.bin/netlify-lambda build src",
-    "start": "node_modules/.bin/netlify-lambda serve src",
-    "dev": "nodemon src/api.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "audit": {

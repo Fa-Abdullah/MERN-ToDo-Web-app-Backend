@@ -3,9 +3,10 @@ const Collection = require("./mongodb")
 const cors = require("cors")
 const serverless = require("serverless-http")
 const app = express()
+const PORT = process.env.PORT || 7000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors({origin:["http://localhost:3000","https://main--snazzy-palmier-a86391.netlify.app:7000/"]}))
 
 // Get all tasks
 app.get('/tasks', async (req, res) => {
@@ -226,7 +227,7 @@ app.post("/profile",async(req,res)=>{
     
 })
 
-app.listen(7000,()=>{
+app.listen(PORT,'0.0.0.0',()=>{
     console.log("port connected");
 })
 
