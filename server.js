@@ -139,7 +139,9 @@ app.delete('/tasks', async (req, res) => {
   }
 });
 
-
+app.get("/",(req,res)=>{
+  res.json("login page")
+})
 
 app.post("/",async(req,res)=>{
 
