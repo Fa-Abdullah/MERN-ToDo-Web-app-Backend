@@ -137,10 +137,10 @@ app.delete('/tasks', async (req, res) => {
     res.status(501).json(`Error in deleting tasks: ${error}`);
   }
 });
-
-app.get("/",(req,res)=>{
-  res.send("login page try") 
-})
+ 
+// app.get("/",(req,res)=>{
+//   res.send("login page try") 
+// })
 
 app.post("/",async(req,res)=>{
 
