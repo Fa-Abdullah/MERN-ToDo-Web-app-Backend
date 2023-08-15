@@ -2,7 +2,6 @@ const express = require("express")
 const Collection = require("./mongodb")
 const cors = require("cors")
 const app = express()
-const PORT = process.env.PORT || 7000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
@@ -140,7 +139,7 @@ app.delete('/tasks', async (req, res) => {
 });
 
 app.get("/",(req,res)=>{
-  res.json("login page")
+  res.send("login page try") 
 })
 
 app.post("/",async(req,res)=>{
@@ -228,7 +227,7 @@ app.post("/profile",async(req,res)=>{
     
 })
 
-app.listen(PORT,()=>{
+app.listen(7000,()=>{
     console.log("port connected");
 })
 
